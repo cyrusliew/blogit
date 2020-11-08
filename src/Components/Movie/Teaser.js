@@ -1,6 +1,8 @@
 import React from 'react';
+import Truncate from 'react-truncate';
+import moment from 'moment';
 import TeaserWrapper from '../TeaserWrapper/TeaserWrapper';
-import { FontAwesomeIcon } from './styles';
+import { FontAwesomeIcon, ReleaseDate } from './styles';
 
 const Teaser = ({
     title,
@@ -14,13 +16,18 @@ const Teaser = ({
     return (
         <TeaserWrapper
             contentType="movie"
-            title={title}
+            title={
+                <>
+                    {title}
+                    {' '}
+                    <ReleaseDate>
+                        {moment(date).format('Do MMMM yyyy')}
+                    </ReleaseDate>
+                </>
+            }
             id={id}
             forceUpdate={forceUpdate}
         >
-            <div>
-                {date}
-            </div>
             <a href={link}>{link}</a>
             <div>
                 
@@ -32,7 +39,7 @@ const Teaser = ({
                     />
                 ))}
             </div>
-            <div>{review}</div>
+            <Truncate lines={3}>{review}</Truncate>
         </TeaserWrapper>
     )
 }

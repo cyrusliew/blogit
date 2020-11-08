@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useRouteMatch, useParams, useHistory } from 'react-router-dom';
 import { getData, saveData } from '../Helpers/helpers';
+import moment from 'moment';
 
 const useForm = (contentType) => {
     const { path } = useRouteMatch();
@@ -49,7 +50,9 @@ const useForm = (contentType) => {
 
     const handleChange = (event) => {
         const target = event.target;
-        setFormData({...formData, [target.name]: target.value});
+        const value = target.type === 'date' ? moment(target.valueAsDate, 'DD/MM/YYYY') : target.value;
+        const name = target.name;
+        setFormData({...formData, [name]: value});
     }
 
     return {

@@ -20,7 +20,7 @@ const CircleBtn = styled.button`
 `;
 
 export const DeleteBtn = styled(CircleBtn)`
-    background: red;
+    background: ${themeColors.danger};
 `;
 
 export const EditBtn = styled(CircleBtn)`

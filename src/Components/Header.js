@@ -23,6 +23,7 @@ const Header = ({
                     Object.keys(icons).map(icon => (
                         <FilterButton
                             key={`filter-${icon}`}
+                            active={icon === filters.contentType}
                             onClick={() => {
                                 if (icon === filters.contentType) {
                                     const updatedFilters = filters;

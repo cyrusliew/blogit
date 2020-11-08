@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import useForm from '../../hooks/useForm';
 import GenericForm from '../Form/GenericForm';
 import {
@@ -51,7 +52,6 @@ const Form = () => {
                             key={`rating-${index}`}
                             index={index}
                             filled={index + 1 <= parseInt(rating) ? 1 : 0}
-                            checked={index + 1 === parseInt(rating)}
                             required
                         />
                     ))}
@@ -67,7 +67,7 @@ const Form = () => {
                     placeholder="Release date"
                     type="date"
                     name="date"
-                    defaultValue={date}
+                    defaultValue={moment(date).format('YYYY-MM-DD')}
                     onChange={handleChange}
                 />
                 <TextArea

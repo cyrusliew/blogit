@@ -3,9 +3,10 @@ import { colors, themeColors } from '../../colors';
 
 export const AddButton = styled.button`
     align-items: center;
-    background: ${colors.norway};
+    background: ${themeColors.primary};
     border-radius: 100%;
     border: 0;
+    color: white;
     cursor: pointer;
     display: inline-flex;
     height: 4rem;
@@ -30,11 +31,11 @@ export const ButtonsWrapper = styled.div`
 
     > a {
         align-items: center;
-        background: ${themeColors.primary};
+        background: ${colors.petiteOrchid};
         border: 0;
         border-radius: 100%;
         bottom: 0;
-        color: ${colors.charade};
+        color: white;
         display: inline-flex;;
         height: 3rem;
         left: 0;

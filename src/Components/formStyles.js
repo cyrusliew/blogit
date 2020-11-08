@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { themeColors } from '../colors';
 
 export const FormWrapper = styled.div`
     display: flex;
@@ -75,7 +76,7 @@ const defaultBtnStyles = `
 `;
 
 const primaryBtnStyles = `
-    background: darkblue;
+    background: ${themeColors.primary};
     color: white;
 
     &:hover {
@@ -84,7 +85,7 @@ const primaryBtnStyles = `
 `;
 
 const dangerBtnStyles = `
-    background: salmon;
+    background: ${themeColors.danger};
     color: white;
 
     &:hover {

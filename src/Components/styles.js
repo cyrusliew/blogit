@@ -23,15 +23,17 @@ export const Filter = styled.div`
 export const FilterButton = styled.button`
     background: lightblue;
     align-items: center;
-    background: ${themeColors.primary};
+    background: ${props => props.active ? colors.petiteOrchid : themeColors.primary};
     border-radius: 100%;
     border: 0;
-    color: #1F1F29;
+    color: white;
     display: inline-flex;
     flex-direction: column;
     height: 3rem;
     justify-content: center;
+    outline: none;
     padding: 2rem;
+    transition: all 0.25s ease;
     width: 3rem;
 `;
 

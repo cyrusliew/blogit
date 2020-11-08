@@ -6,3 +6,8 @@ export const FontAwesomeIcon = styled(OriginalFAIcon)`
         fill: ${props => props.filled ? 'orange' : 'inherit' };
     }
 `;
+
+export const ReleaseDate = styled.span`
+    font-size: 1rem;
+    font-weight: normal;
+`;
