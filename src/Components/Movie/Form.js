@@ -46,7 +46,12 @@ const Form = () => {
                     defaultValue={title}
                     onChange={handleChange}
                 />
-                <div onChange={handleChange}>
+                <div
+                    onChange={handleChange}
+                    name="rating"
+                    role="radiogroup"
+                    required
+                >
                     {[...Array(5)].map((e, index) => (
                         <StarRating
                             key={`rating-${index}`}

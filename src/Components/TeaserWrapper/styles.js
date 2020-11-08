@@ -52,6 +52,10 @@ export const Wrapper = styled.div`
             opacity: 1;
         }
     }
+`;
+
+export const InnerWrapper = styled.div`
+    cursor: pointer;
 
     > * {
         display: block;

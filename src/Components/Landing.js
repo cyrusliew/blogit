@@ -21,12 +21,12 @@ const Landing = () => {
     const [__, forceUpdate] = useReducer(x => x + 1, 0);
 
     useEffect(() => {
-        setData(getData(filters));
+        setData(getData(filters).reverse());
     }, [filters, __])
 
     useEffect(() => {
         if (!data) {
-            setData(getData());
+            setData(getData().reverse());
         }
     }, [data])
 

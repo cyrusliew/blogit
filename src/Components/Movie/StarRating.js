@@ -23,10 +23,14 @@ const StarRating = ({
     required,
 }) => {
     return (
-        <Wrapper>
+        <Wrapper
+            tabIndex={0}
+            role="radiogroup"
+        >
             <input
                 type="radio"
                 name="rating"
+                tabIndex={0}
                 value={index + 1}
                 checked={checked}
                 defaultValue={checked}

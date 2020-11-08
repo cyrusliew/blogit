@@ -38,4 +38,9 @@ export const icons = {
     blog: 'file-alt',
     recipe: 'utensils',
 };
+
+export const getNodeData = (targetId) => {
+    const data = getData();
+    return data.filter(({ id }) => parseInt(id) === parseInt(targetId))[0]; 
+}
  

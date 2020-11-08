@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouteMatch, useParams, useHistory } from 'react-router-dom';
-import { getData, saveData } from '../Helpers/helpers';
+import { getData, getNodeData, saveData } from '../Helpers/helpers';
 import moment from 'moment';
 
 const useForm = (contentType) => {
@@ -31,7 +31,7 @@ const useForm = (contentType) => {
         const data = getData();
 
         if (isEditMode) {
-            const loadedData = data.filter(({ id }) => parseInt(id) === parseInt(currentId))[0];
+            const loadedData = getNodeData(currentId);
             const dataIndex = data.findIndex(({ id }) => parseInt(id) === parseInt(currentId));
             data[dataIndex] = {...loadedData, ...formData};
             saveData(data);

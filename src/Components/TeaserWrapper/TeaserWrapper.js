@@ -7,6 +7,7 @@ import {
     DeleteBtn,
     Header,
     Wrapper,
+    InnerWrapper,
 } from './styles';
 import { deleteData, icons } from '../../Helpers/helpers';
 import Modal from '../Modal/Modal';
@@ -20,6 +21,10 @@ const TeaserWrapper = ({
 }) => {
     const [ displayDeleteModal, setDisplayDeleteModal ] = useState(false);
     const history = useHistory();
+
+    const viewFullContent = () => {
+        history.push(`/${contentType}/${id}`);
+    }
 
     return (
         <>
@@ -37,12 +42,19 @@ const TeaserWrapper = ({
                     </DeleteBtn>
                 </Actions>
 
-                <Header>
-                    <FontAwesomeIcon icon={icons[contentType]} />
-                    {' '}
-                    <h2>{title}</h2>
-                </Header>
-                {children}
+                <InnerWrapper
+                    tabIndex={0}
+                    role="button"
+                    onClick={viewFullContent}
+                    onKeyPress={viewFullContent}
+                >
+                    <Header>
+                        <FontAwesomeIcon icon={icons[contentType]} />
+                        {' '}
+                        <h2>{title}</h2>
+                    </Header>
+                    {children}
+                </InnerWrapper>
             </Wrapper>
             {
                 displayDeleteModal && (
