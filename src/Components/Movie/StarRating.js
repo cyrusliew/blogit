@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from './styles';
 
 const Wrapper = styled.label`
+    position: relative;
+
     input {
-        display: none;
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
 
         &:checked {
             + svg {

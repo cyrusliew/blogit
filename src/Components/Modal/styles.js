@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { themeColors } from '../../colors';
 
 export const ModalWrapper = styled.div`
     align-items: center;
@@ -14,6 +15,8 @@ export const ModalWrapper = styled.div`
 
     > div {
         background: white;
+        border: 1px solid ${themeColors.shadowColor};
+        box-shadow: 0.5rem 0.5rem 0 0 ${themeColors.shadowColor};
         position: relative;
         padding: 2rem;
         max-width: 600px;

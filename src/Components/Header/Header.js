@@ -6,7 +6,7 @@ import {
     FilterButton,
     SearchInput,
 } from './styles';
-import { icons } from '../Helpers/helpers';
+import { icons } from '../../Helpers/helpers';
 
 const Header = ({
     filters,

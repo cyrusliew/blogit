@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 import { useParams } from 'react-router-dom';
-import TeaserWrapper from '../TeaserWrapper/TeaserWrapper';
 import { FontAwesomeIcon, ReleaseDate } from './styles';
 import { getNodeData } from '../../Helpers/helpers';
+import FullWrapper from '../FullWrapper/FullWrapper';
 
 const Full = () => {
     const { id } = useParams();
@@ -16,20 +16,19 @@ const Full = () => {
     } = getNodeData(id);
 
     return (
-        <TeaserWrapper
+        <FullWrapper
             contentType="movie"
-            title={
-                <>
-                    {title}
-                    {' '}
-                    <ReleaseDate>
-                        {moment(date).format('Do MMMM yyyy')}
-                    </ReleaseDate>
-                </>
-            }
+            title={title}
             id={id}
         >
-            <a href={link}>{link}</a>
+            {
+                date && (
+                    <ReleaseDate>
+                        ReleaseDate: {moment(date).format('Do MMMM yyyy')}
+                    </ReleaseDate>
+                )
+            }
+            { link && <div>IMDb Link: <a href={link}>{link}</a></div> }
             <div>
                 
                 {[...Array(5)].map((e, index) => (
@@ -41,7 +40,7 @@ const Full = () => {
                 ))}
             </div>
             <div>{review}</div>
-        </TeaserWrapper>
+        </FullWrapper>
     )
 }
 

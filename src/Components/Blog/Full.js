@@ -2,7 +2,7 @@ import React from 'react';
 import nl2br from 'react-nl2br';
 import { useParams } from 'react-router-dom';
 import { getNodeData } from '../../Helpers/helpers';
-import TeaserWrapper from '../TeaserWrapper/TeaserWrapper';
+import FullWrapper from '../FullWrapper/FullWrapper';
 
 const Full = () => {
     const { id } = useParams();
@@ -12,13 +12,13 @@ const Full = () => {
     } = getNodeData(id);
 
     return (
-        <TeaserWrapper
+        <FullWrapper
             contentType="blog"
             title={title}
             id={id}
         >
             <div>{nl2br(body)}</div>
-        </TeaserWrapper>
+        </FullWrapper>
     )
 }
 

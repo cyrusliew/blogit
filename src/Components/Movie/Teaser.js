@@ -1,8 +1,9 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Truncate from 'react-truncate';
 import moment from 'moment';
 import TeaserWrapper from '../TeaserWrapper/TeaserWrapper';
-import { FontAwesomeIcon, ReleaseDate } from './styles';
+import { ReleaseDate } from './styles';
 
 const Teaser = ({
     title,
@@ -28,7 +29,7 @@ const Teaser = ({
             id={id}
             forceUpdate={forceUpdate}
         >
-            <a href={link}>{link}</a>
+            { link && <a href={link}>{link}</a> }
             <div>
                 
                 {[...Array(5)].map((e, index) => (
