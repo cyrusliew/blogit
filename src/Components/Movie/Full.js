@@ -28,7 +28,7 @@ const Full = () => {
                     </ReleaseDate>
                 )
             }
-            { link && <div>IMDb Link: <a href={link}>{link}</a></div> }
+            { link && <div>IMDb Link: <a href={link} target="_blank" rel="noreferrer">{link}</a></div> }
             <div>
                 
                 {[...Array(5)].map((e, index) => (
