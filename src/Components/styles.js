@@ -7,3 +7,8 @@ export const ContentWrapper = styled.div`
         margin-bottom: 2rem;
     }
 `;
+
+export const LoadMore = styled.div`
+    display: flex;
+    justify-content: center;
+`;
