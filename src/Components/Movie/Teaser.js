@@ -39,7 +39,7 @@ const Teaser = ({
                     />
                 ))}
             </div>
-            <Truncate lines={3}>{review}</Truncate>
+            <Truncate lines={1}>{review}</Truncate>
         </TeaserWrapper>
     )
 }

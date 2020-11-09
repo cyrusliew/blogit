@@ -17,7 +17,7 @@ const Teaser = ({
             id={id}
             forceUpdate={forceUpdate}
         >
-            <Truncate lines={3}>
+            <Truncate lines={1}>
                 <div>{nl2br(ingredients)}</div>
                 <div>{nl2br(steps)}</div>
             </Truncate>
