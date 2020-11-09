@@ -29,6 +29,10 @@ const Form = () => {
         date,
     } = formData;
 
+    if (!isEditMode && !rating) {
+        handleChange({target: {name: 'rating', value: 1}});
+    }
+
     return (
         <FormWrapper>
             <h1>{isEditMode ? `Edit Movie - ${title}` : 'New Movie'}</h1>
@@ -56,8 +60,9 @@ const Form = () => {
                         <StarRating
                             key={`rating-${index}`}
                             index={index}
+                            checked={rating ? index + 1 === parseInt(rating) : index === 0}
                             filled={index + 1 <= parseInt(rating) ? 1 : 0}
-                            required
+                            required={index === 0}
                         />
                     ))}
                     *

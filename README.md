@@ -16,6 +16,9 @@ Introduce proptypes or typescript to reduce error rate.
 ### Form validation on discard
 While landing on a form page, clicking on the discard button will always trigger a modal confirmation. The UX can be improved by adding extra validation so modal will not triggered when the form has not been edited. 
 
+### Improve star rating behavior to enable validation
+A workaround which setting star rating default value to 1 has been done to prevent star rating validation error on form edit.
+
 ### Better validation on filtering content
 Filter content by its type will not be honoured when search text is input, the condition check needs to be improved.
 

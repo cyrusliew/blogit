@@ -21,6 +21,7 @@ const Wrapper = styled.label`
 `;
 
 const StarRating = ({
+    checked,
     index,
     filled,
     required,
@@ -35,6 +36,7 @@ const StarRating = ({
                 name="rating"
                 tabIndex={0}
                 value={index + 1}
+                defaultChecked={checked}
                 required={required}
             />
             <FontAwesomeIcon icon="star" filled={filled} />
