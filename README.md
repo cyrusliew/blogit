@@ -14,7 +14,7 @@ Visit [http://localhost:3000](http://localhost:3000) on the browser to view it.
 Introduce proptypes or typescript to reduce error rate.
 
 ### Form validation on discard
-While landing on a form page regardless of the present of existing data, clicking on the discard button will always trigger a modal confirmation. The UX can be improved by adding extra validation so modal will not triggered when the form has not been edited. 
+While landing on a form page, clicking on the discard button will always trigger a modal confirmation. The UX can be improved by adding extra validation so modal will not triggered when the form has not been edited. 
 
 ### Better validation on filtering content
 Filter content by its type will not be honoured when search text is input, the condition check needs to be improved.
