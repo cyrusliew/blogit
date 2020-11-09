@@ -19,6 +19,7 @@ export const ModalWrapper = styled.div`
         box-shadow: 0.5rem 0.5rem 0 0 ${themeColors.shadowColor};
         position: relative;
         padding: 2rem;
+        margin: 2rem;
         max-width: 600px;
         width: calc(100% - 4rem);
         text-align: center;

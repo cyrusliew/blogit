@@ -16,6 +16,10 @@ export const FormWrapper = styled.div`
             margin-bottom: 1.5rem;
         }
     }
+
+    @media (max-width: 540px) {
+        padding: 2rem;
+    }
 `;
 
 const defaultInputStyles = `
