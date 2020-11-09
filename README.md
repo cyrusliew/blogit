@@ -27,3 +27,6 @@ Navigating between pages keep previous page scroll position, add a custom hook t
 
 ## Improve reachability for buttons in movile devices
 When viewing a content in mobile, it is difficult to reach to the action buttons, consider moving it to a thumb-friendly area to improve reachability.
+
+## Sort content by date
+Consider adding creation date and update date, to sort the list of contents instead of id.
