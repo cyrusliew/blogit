@@ -26,7 +26,7 @@ Add entry popup menu is not optimized for touch event.
 Header is taking an expansive amount of space in mobile. 
 
 ### Page needs to scroll to the top in mobile devices
-Navigating between pages keep previous page scroll position, add a custom hook to allow window top position always start at 0 on page load finish.
+Navigating between pages keep previous page scroll position, this can be fixed by adding a custom hook to allow window top position always start at 0 on page load finish.
 
 ### Improve reachability for buttons in movile devices
 When viewing a content in mobile, it is difficult to reach to the action buttons, consider moving it to a thumb-friendly area to improve reachability.
