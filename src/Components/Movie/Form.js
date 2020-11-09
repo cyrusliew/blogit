@@ -70,6 +70,7 @@ const Form = () => {
                 <Input
                     placeholder="IMDB Link"
                     name="link"
+                    type="url"
                     onChange={handleChange}
                     defaultValue={link}
                 />
