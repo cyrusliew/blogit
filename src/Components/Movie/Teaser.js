@@ -16,18 +16,17 @@ const Teaser = ({
     return (
         <TeaserWrapper
             contentType="movie"
-            title={
-                <>
-                    {title}
-                    {' '}
-                    <ReleaseDate>
-                        {moment(date).format('Do MMMM yyyy')}
-                    </ReleaseDate>
-                </>
-            }
+            title={title}
             id={id}
             forceUpdate={forceUpdate}
         >
+            {
+                !!date && (
+                    <ReleaseDate>
+                        ReleaseDate: {moment(date).format('Do MMMM yyyy')}
+                    </ReleaseDate>
+                )
+            }
             { link && <a href={link} target="_blank" rel="noreferrer">{link}</a>}
             <div>
                 

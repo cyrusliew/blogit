@@ -78,7 +78,7 @@ const Form = () => {
                     placeholder="Release date"
                     type="date"
                     name="date"
-                    defaultValue={moment(date).format('YYYY-MM-DD')}
+                    defaultValue={date ? moment(date).format('YYYY-MM-DD') : null}
                     onChange={handleChange}
                 />
                 <TextArea
